@@ -5,6 +5,13 @@ Today we introduced Joins and Relations, which we'll be implementing using SQL.
 
 Your lab TODOs today will require you to write SQL queries and add associated data to those queries in the `server.js` file, though you need to have an understanding at this point as to how everything is working together to accomplish our full functionality.
 
+## Pairs
+- Meryl / Joe
+- Haley / Michele
+- Pierre / John
+- Mark / Andrew
+- Stephanie / Anwar
+
 ## Submission Instructions
 When you are finished with lab, follow these steps to submit your work. Create one Pull Request (aka: "PR") from your Forked repo to the CF repo with your changes, and you'll each submit that same PR link in Canvas.
 
