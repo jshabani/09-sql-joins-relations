@@ -1,6 +1,5 @@
-![CF](https://i.imgur.com/7v5ASc8.png)  Lab 09: SQL Joins and Relations
+Lab 09: SQL Joins and Relations
 =======
-[Code of Conduct](https://github.com/codefellows/code-of-conduct)
 
 Today we introduced Joins and Relations, which we'll be implementing using SQL.
 
@@ -40,10 +39,7 @@ When you are finished with lab, follow these steps to submit your work. Create o
   * To do so, start postgres in the terminal using the `psql` command
   * Once you're in the postgres shell, enter `DROP TABLE articles;` to remove the table from your local DB
   * Leave the shell open so you can check on your new tables in the upcoming setup steps!
-3. In a new terminal window, run the following command from the starter code dir: `bin/loadarticles`
-  * This command is a local executable in the `bin/` directory (feel free to read the code, but do not get hung up on it if you don't know what's going on...)
-  * It will create a connection with your local postgres db, read the contents of hackerIpsum.json, and then load authors into an `authors` table, and articles into an `articles` table with a reference to the author of each article (using the foreign key)
-  * This executable also relies on the `loadDB.js` file in the `lib/` directory (feel free to read the code!).
+3. In a new terminal window, start your node server: `node server.js`. The `loadDB()` function will run and create and populate the tables for you.
 4. In your postgres shell:
   * Run `select count(*) from articles;`
     * The output should read that you now have 250 records in the articles table.
