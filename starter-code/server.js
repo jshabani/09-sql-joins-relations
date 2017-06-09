@@ -6,7 +6,9 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 3000;
 const app = express();
-const conString = 'postgres://merylturner@localhost:5432/kilovolt';// TODO: Don't forget to set your own conString
+
+const conString = 'postgres://localhost:5432/kilovolt';// TODO: Don't forget to set your own conString
+
 const client = new pg.Client(conString);
 client.connect();
 client.on('error', function(error) {
@@ -48,8 +50,8 @@ app.post('/articles', function(request, response) {
   function queryTwo() {
     // TODO for Haley / Michele
     client.query(
-      ``, // TODO: Write a SQL query to retrieve the author_id from the authors table for the new article
-      [], // TODO: Add the author name as data for the SQL query
+      `SELECT author_id FROM authors WHERE author = $1;`, // TODO: Write a SQL query to retrieve the author_id from the authors table for the new article
+      [request.body.author], // TODO: Add the author name as data for the SQL query
       function(err, result) {
         if (err) console.error(err)
         queryThree(result.rows[0].author_id) // This is our third query, to be executed when the second is complete. We are also passing the author_id into our third query
